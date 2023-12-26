@@ -1,0 +1,77 @@
+.modal {
+    border-radius: rem(12px);
+    width: fit-content;
+    max-height: rem(693px);
+    margin: 2rem auto;
+    background-color: #fff;
+    z-index: 210;
+    position: relative;
+
+    .modal-header {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        height: rem(64px);
+
+        h3 {
+            margin: 0;
+            font-size: rem(16px);
+            font-family: Airbnb_Cereal-Bold;
+        }
+
+
+        button {
+            padding: 0;
+            margin-inline-start: rem(16px);
+            width: rem(32px);
+            height: rem(32px);
+            border: none;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: rem(16px);
+                height: rem(16px);
+            }
+
+            &:hover {
+                background-color: #f7f7f7;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .modal-content {
+        position: relative;
+        background-clip: padding-box;
+        border-radius: 0.3rem;
+    }
+
+}
+
+.modal-about-container {
+
+    padding-inline: rem(24px);
+    width: rem(780px);
+
+
+
+    .about-title {
+        margin-block-start: 1rem;
+        font-family: Airbnb_Cereal-Bold;
+        font-size: rem(26px);
+        height: rem(30px);
+    }
+
+    .about-summary {
+        font-size: rem(16px);
+        font-family: Airbnb_Cereal-Book;
+        font-weight: 100;
+        max-height: rem(567px);
+        overflow-y: auto;
+        padding-bottom: rem(56px);
+    }
+}

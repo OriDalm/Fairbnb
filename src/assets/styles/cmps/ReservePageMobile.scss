@@ -1,0 +1,37 @@
+.reserve-header-mobile {
+    // padding-block-start: 30px;
+    // display: grid;
+    // grid-template-columns: 1fr 10fr;
+    // align-items: center;
+    // justify-content: center;
+    // justify-items: center;
+
+    button {
+        // position: relative;
+        // right: 50px;     
+        // top: 40px;
+        border: none;
+        border-radius: 50%;
+        background-color: inherit;
+
+        height: 48px;
+        width: 48px;
+        padding: 0;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $clr4;
+        }
+
+        img {
+            width: 16px;
+        }
+    }
+
+    span {
+        font-family: Airbnb_Cereal-Bold;
+        color: $clr2;
+        // padding-inline-start: 30vw;
+    }
+
+}

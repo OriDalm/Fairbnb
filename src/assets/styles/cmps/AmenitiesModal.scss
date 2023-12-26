@@ -1,0 +1,37 @@
+.modal-amenities-container {
+    width: rem(780px);
+    margin-block-start: 0.5rem;
+    height: rem(621px);
+    padding-inline: rem(24px);
+    overflow: auto;
+
+    h1 {
+        margin-top: rem(18px);
+        font-size: 22px;
+        font-weight: 100;
+        font-family: Airbnb_Cereal-Medium;
+    }
+
+
+    .amenities-container {
+        display: flex;
+        flex-direction: row;
+        padding-block: rem(24px);
+        gap: 16px;
+        border-bottom: 1px solid rgb(221, 221, 221);
+
+        p {
+            margin: 0;
+            font-weight: 100;
+            font-family: Airbnb_Cereal-Book;
+        }
+    }
+
+    img {
+        width: 24px;
+    }
+
+    .amenities-container:last-child {
+        margin-bottom: 70px;
+    }
+}

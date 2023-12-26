@@ -1,0 +1,62 @@
+.preview-image-carousel {
+    // margin-block-end: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+
+    & .preview-img {
+        width: 100%;
+        aspect-ratio: 1.053 / 1;
+        object-fit: cover;
+        // object-position: 50% 25%;
+        border-radius: 10px;
+    }
+
+    & .custom-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        height: 32px;
+        width: 32px;
+        border: 0;
+        color: $clr1;
+        background-color: $clr4;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.25s ease;
+
+        & img {
+            width: 12px;
+        }
+
+        &.left {
+            left: 0;
+            margin-inline-start: 12px;
+        }
+
+        &.right {
+            right: 0;
+            margin-inline-end: 12px;
+        }
+    }
+
+    & .dot-container {
+        margin-block-end: 10px;
+
+        & .react-multi-carousel-dot button {
+            height: 7px;
+            width: 7px;
+            border-color: white;
+            background-color: white;
+            opacity: 0.6;
+            transition: 0s;
+        }
+
+        & .react-multi-carousel-dot--active button {
+            opacity: 1;
+            background-color: white;
+            border-color: white;
+        }
+    }
+}

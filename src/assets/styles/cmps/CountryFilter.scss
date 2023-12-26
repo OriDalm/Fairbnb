@@ -1,0 +1,58 @@
+.country-filter-container {
+  margin-block-start: rem(8px);
+  margin-block-end: rem(32px);
+  padding-block-start: rem(16px);
+  width: rem(345px);
+  height: rem(410px);
+
+  @include for-normal-header {
+    display: none;
+  }
+  
+  @include scrollbar;
+  
+  h3 {
+    margin-inline-start: rem(24px);
+    margin-block-end: rem(20px);
+    font-size: rem(14px);
+    font-family: Airbnb_Cereal-Bold;
+    padding: rem(8px) 0;
+  }
+
+  .country-filter {
+    overflow: auto;
+    max-height: rem(390px);
+    padding: 0;
+
+    .country {
+      padding: rem(8px) rem(32px) rem(8px) rem(24px);
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f7f7f7;
+      }
+
+      span {
+        font-family: Airbnb_Cereal-Book;
+        font-weight: 100;
+      }
+
+      .location-container {
+        background-color: #ebebeb;
+        border-radius: rem(12px);
+        width: rem(48px);
+        height: rem(48px);
+        margin-right: rem(16px);
+        align-items: center;
+        justify-content: center;
+        display: inline-flex;
+      }
+
+      img {
+        width: rem(22px);
+      }
+    }
+  }
+}

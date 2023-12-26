@@ -1,0 +1,177 @@
+.date-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-inline: auto;
+  color: inherit;
+
+  .rdp-months .rdp-table .rdp-tbody .rdp-cell .rdp-day {
+    font-family: Airbnb_Cereal-Medium !important;
+  }
+  .rdp-cell:has(.rdp-day_range_start, .rdp-day_range_end, .rdp-day_range_middle):not(:has(.rdp-day_range_end)) {
+    background-color: $clr4;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+
+  .rdp-cell:has(.rdp-day_range_start, .rdp-day_range_end, .rdp-day_range_middle):not(:has(.rdp-day_range_start)) {
+    background-color: $clr4;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+
+  .rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+    background-color: white;
+  }
+
+  .rdp-weeknumber,
+  .rdp-day {
+    max-width: none !important;
+  }
+
+  .rdp:not([dir='rtl']) .rdp-day_range_end:not(.rdp-day_range_start) {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+  .rdp:not([dir='rtl']) .rdp-day_range_start:not(.rdp-day_range_end) {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+
+  .rdp-day_range_middle {
+    background-color: $clr4;
+    color: black;
+  }
+
+  .rdp-day_range_end,
+  .rdp-day_range_start {
+    background-color: black;
+    border-radius: 50%;
+  }
+
+  & .rdp-months {
+    display: flex;
+    justify-content: center;
+    gap: 54px;
+
+    & .rdp-caption {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 46px;
+      margin-block-end: 12px;
+      color: $clr2;
+
+      & .rdp-nav_button {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        padding: 0;
+
+        &.rdp-nav_button_previous {
+          left: 0;
+        }
+        &.rdp-nav_button_next {
+          right: 0;
+        }
+      }
+
+      & .rdp-caption_label {
+        justify-content: center;
+        font-size: rem(16px);
+        line-height: rem(20px);
+        font-family: Airbnb_Cereal-Bold;
+        font-weight: 400;
+        text-align: center;
+        flex: 1 1 auto;
+      }
+
+      & .rdp-nav {
+        & svg {
+          width: 12px;
+          height: 16px;
+        }
+      }
+    }
+
+    & .rdp-table {
+      margin-inline: auto;
+      border-collapse: collapse;
+
+      & .rdp-head {
+        & th {
+          font-size: rem(12px);
+          font-family: Airbnb_Cereal-Bold;
+          color: #717171;
+          line-height: 16px;
+          text-transform: capitalize;
+          font-weight: 400;
+        }
+      }
+
+      & .rdp-tbody .rdp-cell {
+        position: relative;
+        padding: 0;
+
+        &:has(.day-range-start, .day-range-end, .day-range-middle) {
+          background-color: pink;
+          color: black;
+        }
+
+        &:has(.day-range-start) {
+          border-top-left-radius: 32px;
+          border-bottom-left-radius: 32px;
+        }
+
+        &:has(.day-range-end) {
+          border-top-right-radius: 32px;
+          border-bottom-right-radius: 32px;
+        }
+
+        & .rdp-day {
+          font-family: Circular-SemiBold;
+          font-weight: 400;
+
+          &:is(.day-range-start, .day-range-end) {
+            background-color: rgb(34, 34, 34);
+            border-radius: 32px;
+            color: #717171;
+          }
+        }
+      }
+    }
+
+    & .rdp-button {
+      position: relative;
+      align-items: center;
+      width: 46px;
+      height: 46px;
+      padding: 0;
+      border: none;
+
+      // background-color: inherit;
+
+      &.rdp-day_disabled {
+        color: rgb(72, 72, 72);
+        opacity: 0.25;
+      }
+
+      &:not(.rdp-day_disabled, .rdp-nav_button_previous, .rdp-nav_button_next):hover {
+        border: 1px solid black;
+        border-radius: 50%;
+      }
+
+      &:is(.rdp-nav_button_previous, .rdp-nav_button_next) {
+        &:hover {
+          cursor: pointer;
+          background-color: $clr4;
+          border-radius: 32px;
+        }
+      }
+    }
+  }
+}

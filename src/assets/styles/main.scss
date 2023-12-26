@@ -1,0 +1,56 @@
+// Setup
+@import 'setup/variables';
+@import 'setup/functions';
+@import 'setup/mixins';
+@import 'setup/typography';
+
+// Basics
+@import 'basics/helpers';
+@import 'basics/layout';
+@import 'basics/base';
+@import 'basics/links';
+@import 'basics/forms';
+
+// Views
+@import 'views/AboutUs';
+@import 'views/HomePage';
+@import 'views/StayIndex';
+@import 'views/ReviewIndex';
+@import 'views/UserDetails';
+
+// Components
+@import 'cmps/Modal.scss';
+@import 'cmps/AppHeader';
+@import 'cmps/AppFooter';
+@import 'cmps/UserMsg';
+@import 'cmps/StayDetails';
+@import 'cmps/FilterExpanded.scss';
+@import 'cmps/Reservation.scss';
+@import 'cmps/ReservationMobile.scss';
+@import 'cmps/ReservePage.scss';
+@import 'cmps/ReservePageMobile.scss';
+@import 'cmps/CustomStyle.scss';
+@import 'cmps/StayLocation.scss';
+@import 'cmps/UserModal.scss';
+@import 'cmps/CountryFilter.scss';
+@import 'cmps/StayGuests.scss';
+@import 'cmps/AirbnbBtn.scss';
+@import 'cmps/FilterCarousel.scss';
+@import 'cmps/PreviewCarousel';
+@import 'cmps/ReviewPreview.scss';
+@import 'cmps/AboutModal.scss';
+@import 'cmps/ReviewsModal.scss';
+@import 'cmps/NoMatches.scss';
+@import 'cmps/StayFilter.scss';
+@import 'cmps/AmenitiesModal.scss';
+@import 'cmps/SignupModal.scss';
+@import 'cmps/DashboardNav.scss';
+@import 'cmps/DesktopTrips.scss';
+@import 'cmps/MobileHeader.scss';
+@import 'cmps/MobileFooter.scss';
+@import 'cmps/PreviewSkeleton.scss';
+@import 'cmps/MobileTrips';
+// @import 'cmps/StayList';
+@import 'cmps/SearchBar.scss'; // @import 'cmps/StayList';
+@import 'cmps/StayPreview';
+@import 'cmps/OrderPreview';

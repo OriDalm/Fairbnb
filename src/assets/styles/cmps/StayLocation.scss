@@ -1,0 +1,73 @@
+.locations-container {
+  width: 414px;
+  margin-block-start: 24px;
+  margin-block-end: 32px;
+  padding-block-start: 0;
+  // padding-block-start: 16px;
+  //   padding-inline: 20px;
+  height: rem(402px);
+  border-left: 1px solid #ebebeb;
+
+  @include for-normal-header {
+    border: none;
+  }
+
+  h3 {
+    padding-inline-start: 4px;
+    font-size: 14px;
+    font-family: Airbnb_Cereal-Bold;
+    margin: 0 0 rem(20px) rem(30px);
+    padding: rem(8px) 0;
+  }
+
+  .locations {
+    margin-inline-start: rem(26px);
+    width: 406px;
+    display: grid;
+    grid-template-columns: 124px 124px 124px;
+    grid-template-rows: repeat(2, 150px);
+    column-gap: 13px;
+    row-gap: 32px;
+
+    .italy,
+    .greece,
+    .united-states,
+    .middle-east,
+    .flexible,
+    .south-america {
+      flex-direction: column;
+      padding-block: 4px;
+      padding-inline: 4px;
+    }
+
+    h5 {
+      font-size: rem(14px);
+      margin-block-start: rem(8px);
+      margin-inline-start: rem(2px);
+      font-family: Airbnb_Cereal-Book;
+      font-weight: 400;
+    }
+
+    .regions {
+      border-radius: rem(12px);
+      background: none;
+      border: 1px solid rgb(221, 221, 221);
+      height: 124px;
+      width: 124px;
+      padding: 0;
+
+      img {
+        height: 122px;
+        width: 122px;
+        border-radius: rem(12px);
+        object-fit: cover;
+        cursor: pointer;
+        border: 1px solid transparent;
+
+        &:hover {
+          border: 1px solid black;
+        }
+      }
+    }
+  }
+}

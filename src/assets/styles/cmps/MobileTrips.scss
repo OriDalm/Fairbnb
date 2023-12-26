@@ -1,0 +1,84 @@
+.mobile-trips-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: Circular-Medium;
+
+
+    .mobile-trip {
+        box-shadow: -6px 10px 16px rgba(0, 0, 0, .12);
+        border-radius: 10px;
+
+    }
+
+    .trips-host-name {
+        grid-row: 2;
+    }
+
+    .reservation-info {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        padding-inline: 14px;
+        padding-block-end: 14px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .reservation-header {
+        border-bottom: 1px solid #ebebeb;
+
+    }
+
+    .reservation-footer {
+        display: flex;
+        justify-content: space-between;
+
+
+    }
+
+    .reservation-date {
+        display: flex;
+        flex-direction: column;
+        padding-inline-end: 10px;
+
+    }
+
+    .trips-location {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid #ebebeb;
+        border-left: 1px solid #ebebeb;
+        padding-inline: 10px;
+
+    }
+
+    .trips-status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-inline-start: 10px;
+        flex-direction: column;
+    }
+
+    img {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+
+    }
+
+    .stay-name {
+        font-size: 20px;
+    }
+
+    .trips-city {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+
+
+}

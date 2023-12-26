@@ -1,0 +1,228 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 40%;
+    z-index: 998;
+}
+
+
+.filter-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+
+    
+    overflow: hidden;
+
+    background-color: white;
+    height: 92vh;
+    width: 780px;
+    border-radius: rem(12px);
+    font-family: Airbnb_Cereal-Book;
+
+    h3 {
+        font-family: Airbnb_Cereal-Book;
+        font-size: rem(22px);
+    }
+
+    p {
+        font-size: rem(14px);
+    }
+
+
+    .filter {
+        padding: rem(24px);
+        border-bottom: 1px solid rgb(234, 234, 234);
+
+        &:not(:first-child) {
+            padding: 2rem rem(24px);
+        }
+    }
+
+    .multi-range-slider {
+        border: none;
+        box-shadow: none;
+        padding: 20px 80px 20px 70px;
+    }
+
+    .multi-range-slider .thumb .caption * {
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+    }
+
+    .multi-range-slider .thumb::before {
+        height: 30px;
+        width: 30px;
+        top: -5px;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px 0px;
+        border: 1px solid rgb(227, 227, 227);
+
+    }
+}
+
+.filter-modal-header {
+    line-height: 16px;
+    text-align: center;
+    border-bottom: 1px solid rgb(234, 234, 234);
+    padding: rem(24px);
+    font-family: Airbnb_Cereal-Bold;
+
+    overflow: hidden;
+
+
+    button {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+
+        border: none;
+        background-color: transparent;
+
+        img {
+
+            position: absolute;
+            height: 1rem;
+            width: 1rem;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    button:hover {
+        background-color: rgb(244, 244, 244);
+    }
+}
+
+.filter-modal-container {
+    overflow-y: auto;
+    height: 82%;
+
+    .price-input-container {
+        display: flex;
+        justify-content: space-around;
+        margin-block-start: 48px;
+
+    }
+
+    span {
+        font-size: rem(24px);
+    }
+
+    .price-input {
+        border: 1px solid rgba(0, 0, 0, 0.24);
+        border-radius: 12px;
+        padding: 0.5rem;
+        div{
+            font-size: 12px;
+        }
+    }
+
+    input {
+        border: none;
+        margin: 0 12px 6px;
+        font-size: 1em;
+    }
+
+    .filter-btn-container {
+        display: flex;
+        padding: 0 rem(40px);
+
+        button {
+            line-height: rem(30px);
+            font-family: Airbnb_Cereal-Bold;
+            font-size: medium;
+            border: 1px solid rgba(0, 0, 0, 0.14);
+            background-color: transparent;
+
+            width: 100%;
+            padding: 1rem 0.5rem
+        }
+
+        button:first-child {
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+
+        button:last-child {
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+
+        .active {
+            color: white;
+            background-color: rgb(34, 34, 34);
+            box-shadow: rgb(0, 0, 0) 0px 2px 8px 0px inset;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0));
+        }
+
+        :hover {
+            border-color: black;
+        }
+
+    }
+
+    .capacity-filter {
+
+        .btn-container{
+            padding: 1.5rem 0;
+        }
+        button {
+            padding: 10px 24px;
+            margin: 4px 10px 4px 0;
+            border-radius: 2em;
+
+            background-color: transparent;
+
+            border: 1px solid rgba(0, 0, 0, 0.14);
+
+        }
+
+        .active {
+            color: white;
+            background-color: rgb(34, 34, 34);
+            box-shadow: rgb(0, 0, 0) 0px 2px 8px 0px inset;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0));
+        }
+    }
+
+
+}
+
+.filter-modal-footer {
+    // position: sticky;
+    // bottom: 0px;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    background-color: white;
+    padding: 1rem 1.5rem;
+
+    button {
+        padding: 14px 24px;
+        font-size: 1rem;
+        font-family: Airbnb_Cereal-Bold;
+        background-color: rgb(34, 34, 34);
+        color: white;
+        border-radius: rem(12px);
+
+        &:first-of-type {
+            color: black;
+            background-color: transparent;
+            border: none;
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,160 @@
+.reservation-container {
+    position: sticky;
+    top: 7rem;
+    width: 22vw;
+    min-width: 240px;
+
+    border-radius: rem(12px);
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+
+    padding: rem(24px);
+    margin-inline-start: 6rem;
+
+    .reservation-details {
+        display: grid;
+        grid-auto-flow: row;
+
+        .reservation-header {
+            margin-block-end: rem(24px);
+            line-height: rem(20px);
+            align-items: end;
+        }
+
+        .price:first-child {
+            font-size: rem(22px);
+            color: $clr2;
+        }
+
+        .price span:last-child {
+            color: $clr2;
+            font-family: Airbnb_Cereal-Book;
+            font-size: 1rem;
+        }
+
+        .rating span {
+            padding: 0 0 0 0.25rem;
+        }
+
+        .rating :nth-child(2) {
+            color: black;
+        }
+
+        .rating:last-child {
+            color: $clr3;
+            font-family: Airbnb_Cereal-Book;
+            font-size: rem(14px);
+        }
+
+        img {
+            width: rem(12px);
+        }
+
+        .btn-reserve {
+            color: white;
+            text-decoration: none;
+            margin: 1rem 0;
+
+            // width: 15vw;
+            min-height: 48px;
+
+            font-size: 16px;
+            font-weight: 600;
+            font-family: Airbnb_Cereal-Bold;
+            border-radius: 10px;
+            border: none;
+        }
+    }
+
+    .reservation-selection {
+        border: 1px solid gray;
+        border-radius: 0.5rem;
+
+        .date {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid gray;
+        }
+
+        .check-in {
+            border-inline-end: 1px solid gray;
+        }
+
+        .check-in :first-child,
+        .check-out :first-child,
+        .guest :first-child {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+
+            font-size: 0.625rem;
+        }
+
+        .check-in :last-child,
+        .check-out :last-child,
+        .guest :last-child {
+            color: $clr2;
+            font-family: Airbnb_Cereal-Book;
+        }
+
+        .check-in,
+        .check-out,
+        .guest {
+            position: relative;
+            padding: 26px 12px 10px;
+            font-size: 14px;
+        }
+
+        .check-in:hover,
+        .check-out:hover,
+        .guest-container:hover {
+            cursor: pointer;
+        }
+
+        img {
+            width: 1rem;
+            position: relative;
+            top: 1.3em;
+            right: 1.3rem;
+
+        }
+    }
+
+    
+
+    .reservation-notice {
+        color: $clr2;
+        font-family: Airbnb_Cereal-Book;
+        font-size: rem(14px);
+
+        text-align: center;
+        margin-block-end: 20px;
+    }
+
+    .summery {
+        color: $clr2;
+        font-family: Airbnb_Cereal-Book;
+        margin-block-end: rem(12px);
+
+        & span:first-child {
+            text-decoration: underline;
+        }
+    }
+
+    .total {
+        border-block-start: 1px solid #dedede;
+        padding: rem(24px) 0 0 0;
+        margin-block-start: rem(24px);
+    }
+
+    .check-out-modal {
+        position: absolute;
+        right: rem(22px);
+        top: rem(132px);
+        background-color: white;
+        border-radius: rem(10px);
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+        z-index: 999;
+    }
+}

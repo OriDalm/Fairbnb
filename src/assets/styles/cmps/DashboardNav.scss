@@ -1,0 +1,155 @@
+.dashboard-nav {
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: rem(250px);
+    padding:0 0 2rem;
+
+    a {
+        display: flex;
+        color: black;
+        align-items: center;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    img {
+        width: 16px;
+        height: 16px;
+        align-self: center;
+
+    }
+
+    .nav-logout {
+        margin-left: 50px;
+        font-family: Airbnb_Cereal-Book;
+        font-weight: 400;
+        display: flex;
+
+        span {
+            margin-inline: rem(10px);
+        }
+
+        :hover {
+            font-weight: bold;
+        }
+    }
+
+    .nav-options {
+        font-family: Airbnb_Cereal-Book;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-content: center;
+        font-size: rem(16px);
+        padding-block: rem(11.21px);
+        gap: 30px;
+        // margin-top: 80px;
+
+        article {
+            display: flex;
+            grid-column: 2;
+            width: fit-content;
+            transform: scaleX(1);
+            margin-left: 50px;
+
+            :hover svg {
+                stroke: $clr1;
+            }
+
+            :hover span {
+                color: $clr1;
+
+            }
+
+            :hover span:after {
+                transform: scaleX(1);
+            }
+
+            svg {
+                width: rem(19px);
+                height: rem(19px);
+                fill: rgb(243, 243, 243);
+                stroke-width: 50;
+                stroke: rgb(178, 178, 187);
+
+            }
+
+            &:not(.selected):hover {
+                cursor: pointer;
+            }
+
+            img {
+                margin-bottom: 2px;
+
+                &:hover+span::after {
+                    transform: scaleX(1);
+                }
+
+                &:hover+span {
+                    color: $clr1;
+
+                }
+            }
+        }
+
+        &>* {
+            & span {
+                line-height: 20px;
+                letter-spacing: normal;
+                margin-inline: rem(10px);
+                padding-block: rem(10px);
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: $clr1;
+                    height: 2px;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+
+                    transition: transform 0.2s ease;
+                    transform: scaleX(0);
+                }
+
+                &:hover {
+                    color: #5674FF;
+
+                    &::after {
+                        transform: scaleX(1);
+                        background-color: $clr1;
+                    }
+                }
+            }
+
+            &.selected span {
+                color: $clr1;
+
+                &::after {
+                    color: $clr1;
+                    transform: scaleX(1);
+                }
+
+                &:hover {
+                    color: $clr1;
+
+                    &::after {
+                        background-color: $clr1;
+                    }
+                }
+            }
+
+            &.selected svg {
+                stroke: $clr1;
+
+            }
+        }
+    }
+}

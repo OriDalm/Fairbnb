@@ -1,0 +1,24 @@
+.no-match {
+    margin-block-start: 30px;
+    margin-inline-start: 6.2rem;
+
+    h1,
+    p {
+        color: $clr2;
+        font-family: Airbnb_Cereal-Book;
+    }
+    
+    button {
+        font-size: 14px;
+        border-radius: 7px;
+        padding: 10px 20px;
+
+        background-color: white;
+        color: $clr2;
+        border: 1px solid rgb(164, 164, 164);
+
+        &:hover {
+            border-color: $clr2;
+        }
+    }
+}

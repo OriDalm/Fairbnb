@@ -1,0 +1,41 @@
+.modal-signup-container {
+    background-color: white;
+    width: rem(568px);
+    height: fit-content;
+    padding: rem(24px);
+    border-top: 1px solid #ebebeb;
+    border-radius: 0.75rem;
+
+    .change-login {
+        width: 100%;
+        border-radius: 0.5rem;
+        border: 1px solid black;
+        height: rem(48px);
+        background-color: white;
+        font-size: rem(14px);
+        margin-top: rem(20px);
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn-reserve {
+        width: 100%;
+        height: rem(48px);
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .signup-title {
+        h1 {
+            font-size: rem(22px);
+            font-family: Airbnb_Cereal-Medium;
+            font-weight: 100;
+        }
+    }
+}

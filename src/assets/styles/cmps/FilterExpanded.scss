@@ -1,0 +1,357 @@
+.filter-expanded-container {
+  background-color: white;
+  // grid-column: 1/ -1;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-rows: none;
+  height: rem(96px);
+  justify-items: center;
+  margin-block-start: rem(80px);
+  // padding-inline: rem(80px);
+  position: absolute;
+  grid-template-columns: 40px 1fr 40px;
+  width: 100%;
+  padding-top: 0;
+  z-index: 10;
+  transition: all 0.2s;
+
+  .filter-expanded {
+    padding: 0;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    border: 1px solid #ddd;
+    border-radius: rem(32px);
+    display: grid;
+    grid-column: 2;
+    grid-template-columns: minmax(auto, 325.391px) repeat(3, auto);
+    height: rem(66px);
+    max-width: 850px;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+
+    .who-container:not(.active) .btn-search-content span,
+    .check-in-container:not(.active) .btn-search-content span,
+    .check-out-container:not(.active) .btn-search-content span,
+    .where-container:not(.active) .btn-search-content span {
+      // opacity: 0;
+      padding: 0;
+    }
+
+
+
+    .check-in-container {
+      margin-right: 5px;
+    }
+
+    .who-container {
+      margin-left: 5px;
+    }
+
+    .check-out-container {
+      margin-left: 5px;
+    }
+
+    & :is(.where-container, .check-in-container, .check-out-container, .who-container) {
+      &:is(.check-in-container, .check-out-container) {
+        margin-left: 1px;
+        min-width: 124px;
+      }
+
+      h3 {
+        font-size: rem(12px);
+        font-family: Airbnb_Cereal-Bold;
+        font-weight: 800;
+        height: 16px;
+        margin: 0;
+      }
+
+      &.who-container .who-search .who span {
+        min-width: 76px;
+      }
+
+      &:not(.where-container)::before {
+        content: '';
+        position: absolute;
+        height: 32px;
+        width: 1px;
+        top: 17px;
+        left: -3px;
+        border-left: 1px solid transparent;
+        border-right: 1px solid rgb(221, 221, 221);
+      }
+
+      &.check-in-container::before {
+        border-left-width: 1.5px;
+      }
+
+      &.check-out-container::before {
+        border-left: 0;
+      }
+    }
+
+    & :is(.where-container, .check-in-container, .check-out-container, .who-container) {
+      position: relative;
+
+      & :is(.where, .check-in, .check-out, .who-search) {
+        z-index: 1;
+        position: relative;
+
+        &:is(.where, .check-in, .check-out),
+        &.who-search .who {
+          padding-block: 14px;
+
+          &>* {
+            &:first-child {
+              letter-spacing: 0.48px;
+              font-weight: 400;
+            }
+
+            &:last-child {
+              font-family: Airbnb_Cereal-Book;
+              color: gray;
+              letter-spacing: 0;
+              font-size: rem(14px);
+              font-weight: 400;
+              height: rem(18px);
+              line-height: 18px;
+
+              &:is(span) {
+                display: block;
+              }
+
+              &:is(input) {
+                background-color: inherit;
+                border: 0;
+                padding: 0;
+                // font-family: Circular-Semibold;
+                color: black;
+                width: 100%;
+                display: block;
+
+                &:focus-visible {
+                  outline: none;
+                }
+              }
+            }
+          }
+        }
+
+        &.where {
+          padding-inline: 32px;
+          height: rem(64px);
+          margin-top: 1px;
+
+          h3 {
+            margin-top: 1px;
+          }
+
+          #country {
+            border: none;
+            padding: 0;
+            height: 18px;
+
+            &::placeholder {
+              font-size: 14px;
+              font-family: Airbnb_Cereal-Book;
+              font-weight: 100;
+              letter-spacing: normal;
+            }
+          }
+        }
+
+        &:is(.check-in, .check-out),
+        &.who-search .who {
+          padding-inline: 24px;
+          line-height: 20.02px;
+
+          & h3 {
+            margin: 0;
+          }
+        }
+
+        &.check-out {
+          margin-left: -1.5px;
+        }
+
+        &.who-search {
+          display: flex;
+          justify-content: space-between;
+          padding: 0;
+
+          & .who {
+            margin-right: 10.5px;
+            flex: 1 1 auto;
+          }
+
+          & .btn-search-container {
+            position: relative;
+            // margin-block: auto;
+            // margin-block: 8px;
+            margin-inline-end: 13px;
+            margin-inline-start: 0px;
+            margin-block-end: 1px;
+            width: 111.75px;
+            transition: width 0.2s ease-in, margin-inline-start 0.2s ease-in;
+            align-self: center;
+
+            & .btn-reserve {
+
+              width: 100%;
+              height: rem(48px);
+              display: block;
+              border: none;
+              border-radius: rem(24px);
+              color: white;
+
+              .btn-search-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                  font-weight: 400;
+                  font-size: 1rem;
+                  font-family: Airbnb_Cereal-Bold;
+                  // opacity: 1;
+                  padding-inline-start: 0.5rem;
+                  padding-inline-end: 0.25rem;
+                  transition: padding .4s;
+                }
+
+                img {
+                  width: 1rem;
+                  height: 1rem;
+                }
+              }
+            }
+
+            .btn-filter {
+              display: flex;
+              border: none;
+              width: 48px;
+              height: 48px;
+              border-radius: 50%;
+              background-color: #ff385c;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              display: none;
+
+              &:hover {
+                background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+              }
+
+
+
+              img {
+                width: rem(16px);
+                height: rem(16px);
+              }
+            }
+          }
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        border-radius: 32px;
+      }
+
+      &.active {
+        border-radius: 32px;
+
+        &::after {
+          background-color: white;
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        &:is(.check-in-container, .check-out-container)::after {
+          right: 0px;
+        }
+
+        &.check-out-container::after {
+          left: -2px;
+        }
+      }
+
+      &:not(.active):hover {
+        background-color: #ddd;
+        border-radius: 32px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &.all {
+      // background-color: gray;
+
+      & .who-container .who-search .btn-search-container {
+        width: rem(48px);
+        margin-inline-start: rem(64px);
+
+        span {
+          // opacity: 0;
+          max-width: 0px;
+          overflow: hidden;
+          padding: 0 !important
+        }
+      }
+    }
+
+    .size-less {
+      height: 0;
+      width: 0;
+
+      .modal:not(.who-modal) {
+        width: 100%;
+      }
+
+      .modal {
+        background-color: white;
+        position: absolute;
+        border-radius: rem(32px);
+        margin-block-start: rem(12px);
+        padding-inline: rem(32px);
+        padding-block: 16px;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.15);
+        display: flex;
+
+        &.where-modal {
+          width: rem(848px);
+
+          @include for-normal-header {
+            width: rem(520px);
+          }
+        }
+
+        &.who-modal {
+          right: 0;
+
+          &:is(.check-in-modal, .check-out-modal) {
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .filter-expanded.all {
+    background-color: white;
+  }
+
+  &.folded {
+    translate: 0px -73px;
+    opacity: 0;
+    scale: 48% 82%;
+    height: 0;
+    pointer-events: none;
+  }
+
+
+}

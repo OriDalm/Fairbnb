@@ -1,0 +1,188 @@
+/* Breakpoint mixins */
+
+@mixin for-mobile-layout {
+
+    //500px
+    @media (max-width: calc($mobile-breakpoint + 40px)) {
+        @content;
+    }
+}
+
+@mixin for-narrow-layout {
+
+    //500px
+    @media (min-width: calc($mobile-breakpoint + 40px)) {
+        @content;
+    }
+}
+
+@mixin for-normal-layout {
+
+    //760px
+    @media (min-width: calc($narrow-breakpoint + 40px)) {
+        @content;
+    }
+}
+
+@mixin for-wide-layout {
+
+    //1000px
+    @media (min-width: calc($normal-breakpoint + 40px)) {
+        @content;
+    }
+}
+
+
+@mixin for-large-layout {
+
+    //1300px
+    @media (min-width: $large-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-extra-large-layout {
+
+    //1440px
+    @media (min-width: $extra-large-breakpoint) {
+        @content;
+    }
+}
+
+// Mixins for list
+
+@mixin for-narrow-list {
+
+    //550px
+    @media (min-width: calc($narrow-breakpoint - 170px)) {
+        @content;
+    }
+}
+
+@mixin for-semi-narrow-list {
+
+    //740px
+    @media (min-width: calc($narrow-breakpoint + 20px)) {
+        @content;
+    }
+}
+
+@mixin for-normal-list {
+
+    //950px
+    @media (min-width: calc($normal-breakpoint - 10px)) {
+        @content;
+    }
+}
+
+
+@mixin for-large-list {
+
+    //1125px
+    @media (min-width: calc($large-breakpoint - 175px)) {
+        @content;
+    }
+}
+
+@mixin for-large-list-max {
+
+    //1125px
+    @media (max-width: calc($large-breakpoint - 175px)) {
+        @content;
+    }
+}
+
+@mixin for-extra-large-list {
+
+    //1640px
+    @media (min-width: calc($extra-large-breakpoint + 200px)) {
+        @content;
+    }
+}
+
+@mixin for-huge-list {
+
+    //1880px
+    @media (min-width: $huge-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-normal-header {
+
+    //960px
+    @media (max-width: $normal-breakpoint) {
+        @content
+    }
+}
+
+/* Media  Mixins */
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: calc(($height / $width) * 100%);
+    }
+
+    >* {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    >img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// Mixin for removing hover efects on iphone screen
+@mixin hover-supported {
+    @media not all and (pointer: coarse) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin status-btn($clr, $percentage) {
+    background-color: lighten($clr, $percentage);
+    color: darken($clr, 5%);
+    border: 1px solid lighten($clr, 15%);
+    border-radius: 4px;
+
+    &:hover {
+        background-color: $clr;
+        color: white;
+        border: 1px solid $clr;
+    }
+}
+
+@mixin status($clr) {
+    color: $clr;
+    text-transform: capitalize;
+    font-family: Airbnb_Cereal-Bold;
+    margin: 0;
+}
+
+@mixin scrollbar() {
+
+    ::-webkit-scrollbar,
+    ::-webkit-scrollbar-thumb {
+        width: rem(6px);
+        border: none;
+        border-radius: rem(13px);
+        background-clip: padding-box;
+        color: rgba(0, 0, 0, 0.3);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 0 rem(10px);
+    }
+}

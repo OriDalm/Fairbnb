@@ -1,0 +1,82 @@
+.detail-header-mobile {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    align-items: center;
+
+    height: 64px;
+
+    .prev-page-btn {
+        @include for-mobile-layout {
+            padding-inline: 10px;
+        }
+
+
+        img {
+            width: 16px;
+        }
+    }
+
+    .wishlist-btn {
+
+        justify-self: end;
+
+        .detail-wishlist-icon {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.reservation-mobile {
+    background-color: #FFF;
+    display: flex;
+
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    margin: 0;
+    height: rem(70px);
+    border-top: 1px solid rgb(221, 221, 221);
+    z-index: 9;
+    align-items: center;
+
+    @include for-mobile-layout {
+        padding-inline: 10px;
+    }
+
+    .price {
+        color: $clr2;
+        font-family: Airbnb_Cereal-Medium;
+
+        span:first-child {
+            font-size: 15px;
+        }
+
+        span:last-child {
+            font-size: 14px;
+        }
+
+    }
+
+    .date {
+        font-family: Airbnb_Cereal-Medium;
+        font-size: 15px;
+    }
+
+    .btn-reserve {
+        color: white;
+        text-decoration: none;
+        margin: 1rem 0;
+
+        width: 150px;
+        min-height: 48px;
+
+        font-size: 16px;
+        font-family: Airbnb_Cereal-Medium;
+        border-radius: 10px;
+        border: none;
+
+        margin-inline-end: 10px;
+    }
+}

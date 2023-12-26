@@ -1,0 +1,100 @@
+.trips-page-container {
+
+    // background-color: rgb(243, 243, 243);
+    height: 100vh;
+    font-family: Airbnb_Cereal-Book;
+
+    .trips-header {
+        grid-column: 2;
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+            font-size: rem(30px);
+            font-family: Airbnb_Cereal-Book;
+            margin: 0;
+            align-self: center;
+            padding-block: rem(20px);
+        }
+
+        img {
+            width: rem(50px);
+        }
+    }
+
+    .dashboard-nav {
+        grid-column: 1;
+    }
+
+    .trips-container {
+        background-color: white;
+        align-items: center;
+        border-radius: rem(10px);
+        gap: rem(20px);
+        padding: rem(20px);
+        margin-block-end: rem(20px);
+        height: rem(840px);
+
+    }
+
+    .trip-table {
+        width: 100%;
+        border-collapse: collapse;
+
+        img {
+            width: rem(100px);
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .destination-cell {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .destination-cell img {
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .destination-cell .stay-name {
+            font-weight: 100;
+        }
+
+        .stay-city {
+            font-size: 0.9em;
+            color: #777;
+        }
+    }
+
+    tr {
+        border-bottom: 1px solid #ddd;
+
+    }
+
+    .trips-price {
+        // font-family: Airbnb_Cereal-Bold;
+        color: #606266;
+    }
+
+    .trip-table th,
+    .trip-table td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    .trips-host-name {
+        color: #606266;
+    }
+
+    .trip-table th {
+        color: #777;
+    }
+
+    .trip-table tbody tr:hover {
+        background-color: #f5f5f5;
+        cursor: pointer;
+    }
+
+}

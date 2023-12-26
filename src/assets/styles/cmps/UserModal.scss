@@ -1,0 +1,30 @@
+.dropdown-modal {
+  background-color: #fff;
+  border-radius: rem(12px);
+  box-shadow: 0 rem(2px) rem(16px) rgba(0, 0, 0, 0.122);
+  flex-direction: column;
+  padding-bottom: rem(10px);
+  padding-top: rem(11px);
+  right: 0;
+  transform: translateY(10px);
+  width: rem(240px);
+  z-index: 12;
+  position: absolute;
+
+  .dropdown-option {
+    cursor: pointer;
+    padding: rem(9px) rem(14px);
+
+    &:hover {
+      text-decoration: none;
+      background-color: #f7f7f7;
+    }
+
+    span {
+      color: rgb(34, 34, 34);
+      font-family: Airbnb_Cereal-Book;
+      font-size: rem(14px);
+      line-height: rem(22.4px);
+    }
+  }
+}

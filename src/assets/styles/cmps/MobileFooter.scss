@@ -1,0 +1,41 @@
+.mobile-footer {
+    bottom: 0;
+    background-color: white;
+    position: fixed;
+    height: 4em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    z-index: 10;
+
+    .footer-options {
+        display: flex;
+        justify-self: center;
+        flex-direction: column;
+        color: #717171;
+        font-weight: 100;
+        font-size: 10px;
+        align-items: center;
+    }
+
+    img {
+        width: rem(24px);
+        height: rem(24px);
+    }
+
+}
+
+.footer-user-modal {
+    position: sticky;
+    bottom: 181px;
+    right: 0;
+    z-index: 100;
+}
+
+.footer-user-big {
+    position: sticky;
+    right: 0;
+    z-index: 100;
+    bottom: 224px;
+}
